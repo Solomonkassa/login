@@ -1,46 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA compatable" content "IE-edge">
-      <meta name="veiwport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="style.css">
-      <link rel="stylesheet" href="boxicons/css/boxicons.css">
-      <title>
-        Jedan | Login
-      </title>
-  </head>
-  <body>
-    <div class="box">
-       <div class="container">
-          <div class="top-header">
-             <span>Have account?</span>
-             <header>Login</header>
-          </div>
-         
-        <div class="input-feild">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="boxicons/css/boxicons.css">
+  <link rel="icon" href="favicon.ico">
+  <title>ethio.com</title>
+</head>
+
+<body>
+  <div class="box">
+    <div class="container">
+      <div class="top-header">
+        <span>Have an account?</span>
+        <h2>Login</h2>
+      </div>
+      <form>
+        <div class="input-field">
           <input type="text" class="input" placeholder="Username" required>
-          <i class="bx-bx-user"> </i>
-      
+          <i class="bx bx-user"></i>
         </div>
-      
-        <div class="input-feild">
-          <input type="password" class="input" placeholder="password" required>
-          <i class="bx-lock-alt"> </i>
+        <div class="input-field">
+          <input type="password" class="input" placeholder="Password" required>
+          <i class="bx bx-lock-alt"></i>
         </div>
-        <div class="input-feild">
-          <input type="submit" class="submit" value="login">
+        <div class="input-field">
+          <input type="submit" class="submit" value="Login">
         </div>
         <div class="bottom">
           <div class="left">
-           <input type="checkbox" id="check">
-           <label for="check"> Remember Me</label>
-        </div>
-          <div class="right">
-              <label> <a href="#"> Forgotten Password?</a></label>
+            <label>
+              <input type="checkbox" id="check">
+              <span>Remember Me</span>
+            </label>
           </div>
-      </div>  
+          <div class="right">
+            <label><a href="#">Forgotten Password?</a></label>
+          </div>
+        </div>
+      </form>
     </div>
-      
-  </body>
+  </div>
+
+  <!-- Include SweetAlert2 library -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- Include your JavaScript file -->
+  <script src="script.js"></script>
+</body>
+
 </html>
