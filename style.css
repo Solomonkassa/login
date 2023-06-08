@@ -1,8 +1,7 @@
 * {
-    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
   }
   body {
     background-image: url("background.jpg");
@@ -15,123 +14,110 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 90vh;
+    min-height: 100vh;
   }
   .container {
-    max-width: 350px;
-    margin: 0 auto;
-    padding: 0 15px;
+    max-width: 500px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
   }
-  span {
-    color: #f4eceae6;
-    font-size: 12px;
-    display: flex;
-    justify-content: center;
-    padding: 0 10px;
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
-  header {
-    color: hsl(25, 46%, 95%);
-    font-size: 30px;
+  .top-header {
     text-align: center;
-    padding: 0 10px;
+    margin-bottom: 30px;
+  }
+  .top-header span {
+    font-size: 14px;
+    color: #888;
+  }
+  h2 {
+    font-size: 24px;
+    color: #333;
     margin-bottom: 20px;
   }
   .input-field {
-    display: flex;
-    flex-direction: column;
+    position: relative;
+    margin-bottom: 20px;
   }
-  .input {
-    height: 45px;
+  .input-field input {
     width: 100%;
+    height: 45px;
     border: none;
     outline: none;
-    border-radius: 30px;
-    padding-left: 45px;
-    background-color: rgba(52, 39, 39, 0.1);
-    margin-top: 10px;
-    position: relative;
-    transition: 0.3s;
-  }
-  .input:focus {
-    background-color: rgba(52, 39, 39, 0.2);
-  }
-  .input:focus + label {
-    transform: translateY(-20px);
-    font-size: 12px;
-  }
-  .input:focus + label:before,
-  .input:focus + label:after {
-    width: 50%;
-  }
-  .input:focus + label:before {
-    transition-delay: 0.2s;
-  }
-  .input:focus + label:after {
-    transition-delay: 0.4s;
-  }
-  .input:focus + label span {
-    color: #ff6158;
-  }
-  .label {
-    position: absolute;
-    top: 0;
-    left: 45px;
+    border-radius: 5px;
+    padding: 0 15px;
     font-size: 16px;
-    transition: 0.3s;
-    color: #fff;
-    pointer-events: none;
+    background-color: #f7f7f7;
+    transition: background-color 0.3s ease;
   }
-  .label:before,
-  .label:after {
-    content: '';
+  .input-field input:focus {
+    background-color: #ebebeb;
+  }
+  .input-field i {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #ff6158;
-    transition: 0.3s;
-  }
-  .label:before {
-    left: 50%;
-    transition-delay: 0s;
-  }
-  .label:after {
-    left: 0;
-    transition-delay: 0.2s;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    color: #888;
   }
   .submit {
-    border: none;
-    border-radius: 30px;
-    font-size: 15px;
+    display: block;
+    width: 100%;
     height: 45px;
+    border: none;
     outline: none;
-    width: 100%;
-    background-color: rgba(144, 175, 193, 0.7);
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #007bff;
     cursor: pointer;
-    transition: 0.3s;
-    margin-top: 10px;
-    position: relative;
-    overflow: hidden;
-  }
-  .submit:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.3);
-    transition: 0.3s;
-  }
-  .submit:hover:before {
-    left: 0;
-  }
-  .submit span {
-    position: relative;
-    z-index: 1;
+    transition: background-color 0.3s ease;
   }
   .submit:hover {
-    box-shadow: 1px 5px 7px 1px rgba(110, 14, 237, 0.2);
-    transform: scale(1.1);
+    background-color: #0056b3;
+  }
+  .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .left {
+    flex-grow: 1;
+  }
+  .left label {
+    font-size: 14px;
+    color: #888;
+    cursor: pointer;
+    user-select: none;
+  }
+  .left input[type="checkbox"] {
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  .right {
+    text-align: right;
+    margin-left: 10px;
+  }
+  .right a {
+    font-size: 14px;
+    color: #888;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .right a:hover {
+    color: #555;
   }
